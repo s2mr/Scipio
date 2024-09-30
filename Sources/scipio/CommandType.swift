@@ -37,7 +37,7 @@ extension Runner {
     init(commandType: CommandType, buildOptions: BuildOptionGroup, globalOptions: GlobalOptionGroup) {
         // FIXME it's strange to raise the error here, but it will be removed in a future release
         if buildOptions.shouldBuildStaticFramework {
-            fatalError("--static is deprecated. Use `-framework-type static` instead.")
+            fatalError("--static is deprecated. Use `--framework-type static` instead.")
         }
 
         let baseBuildOptions = Runner.Options.BuildOptions(
